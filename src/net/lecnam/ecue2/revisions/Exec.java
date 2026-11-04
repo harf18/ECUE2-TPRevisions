@@ -17,7 +17,12 @@ public class Exec {
         ce.appliquerInterets();
         //ce.retirer(150);
         ce.retirer(100);
-        System.out.println(ce.toString());
+        //System.out.println(ce.toString());
+        CompteEntreprise ce2 = new CompteEntreprise("676767", cli1, "Faudra Tiff'Hair", "080055241515619165165");
+        ce2.deposer(150000);
+        ce2.appliquerInterets();
+        //ce2.retirer(14000);
+        System.out.println(ce2.toString());
 
     }
 }
