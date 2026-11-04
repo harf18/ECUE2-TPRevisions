@@ -23,6 +23,44 @@ public abstract class CompteBancaire {
         this.solde = solde;
     }
 
+    public String getNumCom() {
+        return this.numeroCompte;
+    }
 
+    public double getSolde() {
+        return this.solde;
+    }
+
+    public Client getTit() {
+        return this.titulaire;
+    }
+
+    public LocalDate getDatOuv() {
+        return this.dateOuverture;
+    }
+
+    public void deposer(double montant){
+        if (montant <= 0) throw new IllegalArgumentException();
+        else this.solde += montant;
+    }
+
+    // On met en protected pour éviter que TOUT le public y accède, on ne souhaite pas que n'importe qui s'en serve
+    protected void debiter(double montant){
+        this.solde -= montant;
+    }
+
+    public abstract void retirer(double montant) throws SoldeInsuffisantException;
+    public abstract double calculerInterets();
+
+    public void appliquerInterets(){
+        this.solde += calculerInterets();
+    }
+
+    public String toString(){
+        return "Numero compte : " + this.numeroCompte
+                + "\n" + titulaire.toString()
+                + "\n Date d'ouverture : " + this.dateOuverture
+                + "\n Solde : " + this.solde;
+    }
 
 }

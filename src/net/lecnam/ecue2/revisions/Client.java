@@ -18,17 +18,17 @@ public class Client {
         return this.prenom;
     }
 
-    public String getNum(){
+    public String getNumCli(){
         return this.numeroClient;
     }
 
     public String toString(){
-        return "Le client avec le numero " + this.numeroClient + " s'appelle + " + this.nom + " " + this.prenom;
+        return "Numero client : " + this.numeroClient + " \nNom : " + this.nom + "\nPrénom : " + this.prenom;
     }
 
     public boolean equals(Client c){
         if (c.getClass() == getClass() || c == null) return false;
-        if (c.getNum() != this.numeroClient) return false;
+        if (c.getNumCli() != this.numeroClient) return false;
         return true;
     }
 
