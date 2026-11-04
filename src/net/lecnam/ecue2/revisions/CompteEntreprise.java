@@ -29,6 +29,8 @@ public class CompteEntreprise extends CompteBancaire{
         plafondRetrait = 10000;
     }
 
+    // IllegalArguementException hérite de runtime, c'est pour ça qu'il est unchecked tandis que
+    // SoldeInsufficantException descent de Exception qui lui est checked
     @Override
     void retirer(double montant) throws SoldeInsuffisantException {
         if (montant > plafondRetrait) {
