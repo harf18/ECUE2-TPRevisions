@@ -41,5 +41,21 @@ public class Exec {
             System.out.println(e.getMessage());
         }
 
+        System.out.println("\n");
+
+        System.out.println("Exercice 5 test : ");
+        CompteEpargne ce1 = new CompteEpargne("7895182939", client2, 0.07);
+        ce1.deposer(5000);
+        System.out.println(ce1);
+
+        ce1.appliquerInterets();
+        System.out.println(ce1);
+
+        try {
+            ce1.retirer(3000000);
+        } catch (SoldeInsuffisantException e) {
+            System.out.println(e.getMessage() + "Montant manquant : " + e.getMontantManquant());
+        }
+
     }
 }
