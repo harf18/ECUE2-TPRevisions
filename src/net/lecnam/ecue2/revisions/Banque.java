@@ -17,7 +17,8 @@ public class Banque {
     {
         if (compte == null) return;
         if (comptes.length == nbComptes) {
-            throw new IllegalStateException("La banque est pleine");
+//            throw new IllegalStateException("La banque est pleine");
+            comptes = Arrays.copyOf(comptes, nbComptes * 2);
         }
 
         for (int i =0; i < nbComptes;i++) {

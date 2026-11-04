@@ -96,6 +96,7 @@ public class Exec {
 
         try {
             mastoBonque.ajouterCompte(cc2);
+            System.out.println("Ajouté");
         } catch (IllegalStateException e) {
             System.out.println(e.getMessage());
         }
