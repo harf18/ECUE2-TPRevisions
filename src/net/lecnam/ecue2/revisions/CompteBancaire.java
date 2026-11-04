@@ -59,8 +59,8 @@ public abstract class CompteBancaire {
     public String toString(){
         return "Numero compte : " + this.numeroCompte
                 + "\n" + titulaire.toString()
-                + "\n Date d'ouverture : " + this.dateOuverture
-                + "\n Solde : " + this.solde;
+                + "\nDate d'ouverture : " + this.dateOuverture
+                + "\nSolde : " + this.solde;
     }
 
 }
