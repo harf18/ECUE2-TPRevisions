@@ -11,7 +11,13 @@ public class Exec {
         //System.out.println(cc.toString());
         //cc.retirer(10000);
         cc.retirer(12);
-        System.out.println(cc.toString());
+        //System.out.println(cc.toString());
+        CompteEpargne ce = new CompteEpargne("676767", cli1, 0.03);
+        ce.deposer(100);
+        ce.appliquerInterets();
+        //ce.retirer(150);
+        ce.retirer(100);
+        System.out.println(ce.toString());
 
     }
 }
