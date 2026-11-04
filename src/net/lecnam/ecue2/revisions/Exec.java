@@ -4,7 +4,7 @@ public class Exec {
     static void main() {
 
         //testExercice1();
-
+        testExercice2();
     }
 
     private static void testExercice1() {
@@ -22,5 +22,9 @@ public class Exec {
         System.out.println("---------------------");
 
         System.out.println(client1.equals(client2));
+    }
+
+    private static void testExercice2() {
+        Client client1 = new Client("Dujour", "Valentin", "123456A");
     }
 }
