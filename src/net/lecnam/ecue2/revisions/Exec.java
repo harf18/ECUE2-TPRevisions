@@ -56,6 +56,29 @@ public class Exec {
         } catch (SoldeInsuffisantException e) {
             System.out.println(e.getMessage() + "Montant manquant : " + e.getMontantManquant());
         }
+        System.out.println("\n");
+
+
+        System.out.println("Exercice 6 test : ");
+        CompteEntreprise cEntreprise1 = new CompteEntreprise("111111111", client1, "Pleiades Corp.", "777777");
+        CompteEntreprise cEntreprise2 = new CompteEntreprise("111151111", client1, "Pleiades Industries", "774477");
+        cEntreprise1.deposer(15000000);
+        System.out.println(cEntreprise1);
+
+        cEntreprise1.appliquerInterets();
+        System.out.println(cEntreprise1);
+
+        try {
+            //cEntreprise1.retirer(55000);
+            //cEntreprise2.retirer(1);
+            cEntreprise1.retirer(10000);
+        } catch (SoldeInsuffisantException e) {
+            System.out.println(e.getMessage() + "Montant manquant : " + e.getMontantManquant());
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+
+        System.out.println(cEntreprise1);
 
     }
 }
