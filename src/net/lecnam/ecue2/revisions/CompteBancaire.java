@@ -45,7 +45,7 @@ public abstract class CompteBancaire {
     @Override
     public String toString() {
         return String.format("Compte %s (%s) crée le %s\n" +
-                "Solde : %f", numeroCompte, titulaire, dateOuverture, solde);
+                "Solde : %.2f €", numeroCompte, titulaire, dateOuverture, solde);
     }
 
     void appliquerInterets() {
