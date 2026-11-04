@@ -2,7 +2,6 @@ package net.lecnam.ecue2.revisions;
 
 public class Client {
 
-    // Attributs
     private String nom;
     private String prenom;
     private String numeroClient;
